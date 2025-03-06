@@ -19,10 +19,10 @@ jobs:
       - name: Set up Docker
         run: |
           docker --version
-          docker-compose --version
+          docker compose version
 
       - name: Start services with Docker Compose
-        run: docker-compose up -d
+        run: docker compose up -d
 
       - name: Wait for PostgreSQL to be ready
         run: |
