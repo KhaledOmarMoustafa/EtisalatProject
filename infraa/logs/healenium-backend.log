@@ -1,0 +1,230 @@
+2025-03-06 14:02:38.869  INFO 1 - [       main] c.epam.healenium.Application     : Starting Application v3.4.6 using Java 22.0.2 with PID 1 (/healenium-backend.jar started by root in /) 
+2025-03-06 14:02:39.015  INFO 1 - [       main] c.epam.healenium.Application     : No active profile set, falling back to 1 default profile: "default" 
+2025-03-06 14:02:43.468  INFO 1 - [       main] .RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+2025-03-06 14:02:43.948  INFO 1 - [       main] .RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 456 ms. Found 4 JPA repository interfaces. 
+2025-03-06 14:02:46.358  INFO 1 - [       main] o.s.b.w.e.t.TomcatWebServer      : Tomcat initialized with port 7878 (http) 
+2025-03-06 14:02:46.398  INFO 1 - [       main] o.a.c.core.StandardService       : Starting service [Tomcat] 
+2025-03-06 14:02:46.399  INFO 1 - [       main] o.a.c.core.StandardEngine        : Starting Servlet engine: [Apache Tomcat/10.1.30] 
+2025-03-06 14:02:46.502  INFO 1 - [       main] o.a.c.c.C.[.[localhost].[/]      : Initializing Spring embedded WebApplicationContext 
+2025-03-06 14:02:46.503  INFO 1 - [       main] rvletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 7353 ms 
+2025-03-06 14:02:46.961  INFO 1 - [       main] c.z.hikari.HikariDataSource      : HikariPool-1 - Starting... 
+2025-03-06 14:02:47.378  INFO 1 - [       main] c.z.hikari.HikariDataSource      : HikariPool-1 - Start completed. 
+2025-03-06 14:02:47.771  INFO 1 - [       main] liquibase.database               : Set default schema name to healenium 
+2025-03-06 14:02:49.688  INFO 1 - [       main] liquibase.changelog              : Creating database history table with name: healenium.databasechangelog 
+2025-03-06 14:02:49.790  INFO 1 - [       main] liquibase.changelog              : Reading from healenium.databasechangelog 
+2025-03-06 14:02:50.090  INFO 1 - [       main] liquibase.lockservice            : Successfully acquired change log lock 
+2025-03-06 14:02:50.093  INFO 1 - [       main] liquibase.command                : Using deploymentId: 1258970093 
+2025-03-06 14:02:50.100  INFO 1 - [       main] liquibase.changelog              : Reading from healenium.databasechangelog 
+2025-03-06 14:02:50.173  INFO 1 - [       main] liquibase.ui                     : Running Changeset: changelog/001_createSequence.xml::3::nkobzev 
+2025-03-06 14:02:50.195  INFO 1 - [       main] liquibase.changelog              : Sequence healing_result_seq created 
+2025-03-06 14:02:50.209  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/001_createSequence.xml::3::nkobzev ran successfully in 32ms 
+2025-03-06 14:02:50.231  INFO 1 - [       main] liquibase.ui                     : Running Changeset: changelog/002_selector.xml::5::nkobzev 
+2025-03-06 14:02:50.255  INFO 1 - [       main] liquibase.changelog              : Table SELECTOR created 
+2025-03-06 14:02:50.260  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/002_selector.xml::5::nkobzev ran successfully in 28ms 
+2025-03-06 14:02:50.270  INFO 1 - [       main] liquibase.ui                     : Running Changeset: changelog/002_selector.xml::6::nkobzev 
+2025-03-06 14:02:50.341  INFO 1 - [       main] liquibase.changelog              : Index SELECTOR_PK created 
+2025-03-06 14:02:50.345  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/002_selector.xml::6::nkobzev ran successfully in 73ms 
+2025-03-06 14:02:50.354  INFO 1 - [       main] liquibase.ui                     : Running Changeset: changelog/003_healing.xml::7::nkobzev 
+2025-03-06 14:02:50.367  INFO 1 - [       main] liquibase.changelog              : Table HEALING created 
+2025-03-06 14:02:50.371  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/003_healing.xml::7::nkobzev ran successfully in 16ms 
+2025-03-06 14:02:50.379  INFO 1 - [       main] liquibase.ui                     : Running Changeset: changelog/003_healing.xml::8::nkobzev 
+2025-03-06 14:02:50.411  INFO 1 - [       main] liquibase.changelog              : Index HEALING_PK created 
+2025-03-06 14:02:50.422  INFO 1 - [       main] liquibase.changelog              : Foreign key constraint added to HEALING (SELECTOR_ID) 
+2025-03-06 14:02:50.427  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/003_healing.xml::8::nkobzev ran successfully in 47ms 
+2025-03-06 14:02:50.438  INFO 1 - [       main] liquibase.ui                     : Running Changeset: changelog/004_healingResult.xml::9::nkobzev 
+2025-03-06 14:02:50.455  INFO 1 - [       main] liquibase.changelog              : Table HEALING_RESULT created 
+2025-03-06 14:02:50.459  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/004_healingResult.xml::9::nkobzev ran successfully in 20ms 
+2025-03-06 14:02:50.468  INFO 1 - [       main] liquibase.ui                     : Running Changeset: changelog/004_healingResult.xml::10::nkobzev 
+2025-03-06 14:02:50.509  INFO 1 - [       main] liquibase.changelog              : Index HEALING_RESULT_PK created 
+2025-03-06 14:02:50.515  INFO 1 - [       main] liquibase.changelog              : Foreign key constraint added to HEALING_RESULT (HEALING_ID) 
+2025-03-06 14:02:50.519  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/004_healingResult.xml::10::nkobzev ran successfully in 50ms 
+2025-03-06 14:02:50.529  INFO 1 - [       main] liquibase.ui                     : Running Changeset: changelog/005_report.xml::11::nkobzev 
+2025-03-06 14:02:50.542  INFO 1 - [       main] liquibase.changelog              : Table REPORT created 
+2025-03-06 14:02:50.547  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/005_report.xml::11::nkobzev ran successfully in 17ms 
+2025-03-06 14:02:50.554  INFO 1 - [       main] liquibase.ui                     : Running Changeset: changelog/005_report.xml::12::nkobzev 
+2025-03-06 14:02:50.598  INFO 1 - [       main] liquibase.changelog              : Index REPORT_PK created 
+2025-03-06 14:02:50.602  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/005_report.xml::12::nkobzev ran successfully in 47ms 
+2025-03-06 14:02:50.609  INFO 1 - [       main] liquibase.ui                     : Running Changeset: changelog/006_command_and_healingenable_column.xml::13::nkobzev 
+2025-03-06 14:02:50.616  INFO 1 - [       main] liquibase.changelog              : Columns COMMAND(VARCHAR(264)),ENABLE_HEALING(BOOLEAN) added to SELECTOR 
+2025-03-06 14:02:50.620  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/006_command_and_healingenable_column.xml::13::nkobzev ran successfully in 10ms 
+2025-03-06 14:02:50.634  INFO 1 - [       main] liquibase.util                   : UPDATE SUMMARY 
+2025-03-06 14:02:50.635  INFO 1 - [       main] liquibase.util                   : Run:                         10 
+2025-03-06 14:02:50.635  INFO 1 - [       main] liquibase.util                   : Previously run:               0 
+2025-03-06 14:02:50.636  INFO 1 - [       main] liquibase.util                   : Filtered out:                 0 
+2025-03-06 14:02:50.636  INFO 1 - [       main] liquibase.util                   : ------------------------------- 
+2025-03-06 14:02:50.637  INFO 1 - [       main] liquibase.util                   : Total change sets:           10 
+2025-03-06 14:02:50.637  INFO 1 - [       main] liquibase.util                   : Update summary generated 
+2025-03-06 14:02:50.641  INFO 1 - [       main] liquibase.command                : Update command completed successfully. 
+2025-03-06 14:02:50.642  INFO 1 - [       main] liquibase.ui                     : Liquibase: Update has been successful. Rows affected: 10 
+2025-03-06 14:02:50.650  INFO 1 - [       main] liquibase.lockservice            : Successfully released change log lock 
+2025-03-06 14:02:50.652  INFO 1 - [       main] liquibase.command                : Command execution complete 
+2025-03-06 14:02:50.992  INFO 1 - [       main] o.h.j.internal.util.LogHelper    : HHH000204: Processing PersistenceUnitInfo [name: default] 
+2025-03-06 14:02:51.276  INFO 1 - [       main] org.hibernate.Version            : HHH000412: Hibernate ORM core version 6.5.3.Final 
+2025-03-06 14:02:51.371  INFO 1 - [       main] o.h.c.i.RegionFactoryInitiator   : HHH000026: Second-level cache disabled 
+2025-03-06 14:02:52.392  INFO 1 - [       main] .o.j.p.SpringPersistenceUnitInfo : No LoadTimeWeaver setup: ignoring JPA class transformer 
+2025-03-06 14:02:52.424  WARN 1 - [       main] org.hibernate.orm.deprecation    : HHH90000021: Encountered deprecated setting [hibernate.temp.use_jdbc_metadata_defaults], use [hibernate.boot.allow_jdbc_metadata_access] instead 
+2025-03-06 14:02:52.519  WARN 1 - [       main] org.hibernate.orm.deprecation    : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default) 
+2025-03-06 14:02:55.600  WARN 1 - [       main] o.h.m.internal.MetadataContext   : HHH015011: Unable to locate static metamodel field : com.epam.healenium.model.domain.Selector_#nodePathWrapper; this may or may not indicate a problem with the static metamodel 
+2025-03-06 14:02:55.615  INFO 1 - [       main] h.e.t.j.p.i.JtaPlatformInitiator : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) 
+2025-03-06 14:02:55.624  INFO 1 - [       main] ontainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default' 
+2025-03-06 14:02:57.277  INFO 1 - [       main] o.s.d.j.r.q.QueryEnhancerFactory : Hibernate is in classpath; If applicable, HQL parser will be used. 
+2025-03-06 14:02:59.206  INFO 1 - [       main] .a.w.s.WelcomePageHandlerMapping : Adding welcome page template: index 
+2025-03-06 14:03:01.035  INFO 1 - [       main] .s.b.a.e.w.EndpointLinksResolver : Exposing 1 endpoint beneath base path '/actuator' 
+2025-03-06 14:03:01.459  INFO 1 - [       main] o.s.b.w.e.t.TomcatWebServer      : Tomcat started on port 7878 (http) with context path '/' 
+2025-03-06 14:03:01.742  INFO 1 - [       main] c.epam.healenium.Application     : Started Application in 24.408 seconds (process running for 28.814) 
+2025-03-06 14:21:38.288  INFO 1 - [7878-exec-1] o.a.c.c.C.[.[localhost].[/]      : Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2025-03-06 14:21:38.364  INFO 1 - [7878-exec-1] o.s.w.s.DispatcherServlet        : Initializing Servlet 'dispatcherServlet' 
+2025-03-06 14:21:38.775  INFO 1 - [7878-exec-1] o.s.w.s.DispatcherServlet        : Completed initialization in 406 ms 
+2025-03-06 14:21:48.627  INFO 1 - [7878-exec-3] healenium                        : [Save Elements] Request: By.cssSelector(input[id='user-name']) 
+2025-03-06 14:21:49.574  INFO 1 - [7878-exec-4] healenium                        : [Save Elements] Request: By.xpath((//input[@data-test='password'])) 
+2025-03-06 14:27:12.958  INFO 1 - [7878-exec-3] healenium                        : [Save Elements] Request: By.cssSelector(input[id='user-name']) 
+2025-03-06 14:27:16.006  INFO 1 - [7878-exec-4] healenium                        : [Save Elements] Request: By.xpath((//input[@data-test='password'])) 
+2025-03-06 14:29:56.457  INFO 1 - [7878-exec-9] healenium                        : [Save Elements] Request: By.cssSelector(input[id='user-name']) 
+2025-03-06 14:29:57.185  INFO 1 - [878-exec-10] healenium                        : [Save Elements] Request: By.xpath((//input[@data-test='password'])) 
+2025-03-06 14:29:57.726  INFO 1 - [7878-exec-1] healenium                        : [Save Elements] Request: By.xpath(//input[@value='LOGIN']) 
+2025-03-06 14:30:40.380  INFO 1 - [7878-exec-2] healenium                        : [Save Elements] Request: By.xpath((//div[@id="inventory_container"])[2]) 
+2025-03-06 14:30:42.891  INFO 1 - [7878-exec-4] healenium                        : [Save Elements] Request: By.xpath((//div[@class="inventory_item_name"])[1]) 
+2025-03-06 14:30:43.350  INFO 1 - [7878-exec-5] healenium                        : [Save Elements] Request: By.xpath((//div[@class="inventory_item_name"])[2]) 
+2025-03-06 14:30:43.818  INFO 1 - [7878-exec-6] healenium                        : [Save Elements] Request: By.xpath((//div[@class="inventory_item_name"])[3]) 
+2025-03-06 14:30:44.258  INFO 1 - [7878-exec-7] healenium                        : [Save Elements] Request: By.xpath((//div[@class="inventory_item_name"])[4]) 
+2025-03-06 14:30:44.685  INFO 1 - [7878-exec-8] healenium                        : [Save Elements] Request: By.xpath((//button[@class="btn_primary btn_inventory"])[4]) 
+2025-03-06 14:30:45.006  INFO 1 - [7878-exec-9] healenium                        : [Save Elements] Request: By.xpath((//div[@class="inventory_item_price"])[4]) 
+2025-03-06 14:30:46.034  INFO 1 - [878-exec-10] healenium                        : [Save Elements] Request: By.xpath((//div[@class="inventory_item_name"])[5]) 
+2025-03-06 14:30:46.514  INFO 1 - [7878-exec-1] healenium                        : [Save Elements] Request: By.xpath((//div[@class="inventory_item_name"])[5]) 
+2025-03-06 14:30:47.577  INFO 1 - [7878-exec-2] healenium                        : [Save Elements] Request: By.xpath(//div[@class="inventory_details_price"]) 
+2025-03-06 14:30:48.003  INFO 1 - [7878-exec-3] healenium                        : [Save Elements] Request: By.cssSelector(button[class="btn_primary btn_inventory"]) 
+2025-03-06 14:30:48.738  INFO 1 - [7878-exec-4] healenium                        : [Save Elements] Request: By.xpath(//span[@class="fa-layers-counter shopping_cart_badge"]) 
+2025-03-06 14:30:49.255  INFO 1 - [7878-exec-5] healenium                        : [Save Elements] Request: By.xpath(//*[@class="shopping_cart_link fa-layers fa-fw"]) 
+2025-03-06 14:30:50.160  INFO 1 - [7878-exec-6] healenium                        : [Save Elements] Request: By.xpath((//div[@class="inventory_item_name"])[1]) 
+2025-03-06 14:30:50.658  INFO 1 - [7878-exec-7] healenium                        : [Save Elements] Request: By.xpath((//div[@class="inventory_item_price"])[1]) 
+2025-03-06 14:30:51.088  INFO 1 - [7878-exec-8] healenium                        : [Save Elements] Request: By.xpath((//div[@class="inventory_item_name"])[2]) 
+2025-03-06 14:30:51.512  INFO 1 - [7878-exec-9] healenium                        : [Save Elements] Request: By.xpath((//div[@class="inventory_item_price"])[2]) 
+2025-03-06 14:30:51.947  INFO 1 - [878-exec-10] healenium                        : [Save Elements] Request: By.xpath(//a[@class="btn_action checkout_button"]) 
+2025-03-06 14:30:52.820  INFO 1 - [7878-exec-1] healenium                        : [Save Elements] Request: By.xpath(//input[@data-test="firstName"]) 
+2025-03-06 14:30:53.357  INFO 1 - [7878-exec-2] healenium                        : [Save Elements] Request: By.xpath(//input[@data-test="lastName"]) 
+2025-03-06 14:30:53.892  INFO 1 - [7878-exec-3] healenium                        : [Save Elements] Request: By.xpath(//input[@data-test="postalCode"]) 
+2025-03-06 14:30:54.622  INFO 1 - [7878-exec-4] healenium                        : [Save Elements] Request: By.xpath(//input[@class="btn_primary cart_button"]) 
+2025-03-06 14:30:55.603  INFO 1 - [7878-exec-5] healenium                        : [Save Elements] Request: By.xpath((//div[@class="inventory_item_name"])[1]) 
+2025-03-06 14:30:56.058  INFO 1 - [7878-exec-6] healenium                        : [Save Elements] Request: By.xpath((//div[@class="inventory_item_name"])[2]) 
+2025-03-06 14:30:56.492  INFO 1 - [7878-exec-7] healenium                        : [Save Elements] Request: By.xpath((//div[@class="inventory_item_price"])[1]) 
+2025-03-06 14:30:56.977  INFO 1 - [7878-exec-8] healenium                        : [Save Elements] Request: By.xpath((//div[@class="inventory_item_price"])[2]) 
+2025-03-06 14:30:57.465  INFO 1 - [7878-exec-9] healenium                        : [Save Elements] Request: By.xpath(//div[@class="summary_subtotal_label"]) 
+2025-03-06 14:30:58.162  INFO 1 - [878-exec-10] healenium                        : [Save Elements] Request: By.xpath(//div[@class="summary_tax_label"]) 
+2025-03-06 14:30:58.608  INFO 1 - [7878-exec-1] healenium                        : [Save Elements] Request: By.xpath((//div[@class="summary_total_label"])[1]) 
+2025-03-06 14:30:59.035  INFO 1 - [7878-exec-2] healenium                        : [Save Elements] Request: By.xpath(//a[@class="btn_action cart_button"]) 
+2025-03-06 14:31:00.087  INFO 1 - [7878-exec-3] healenium                        : [Save Elements] Request: By.xpath(//h2[@class="complete-header"]) 
+2025-03-06 14:32:54.725  INFO 1 - [hutdownHook] ontainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default' 
+2025-03-06 14:32:54.885  INFO 1 - [hutdownHook] c.z.hikari.HikariDataSource      : HikariPool-1 - Shutdown initiated... 
+2025-03-06 14:32:54.931  INFO 1 - [hutdownHook] c.z.hikari.HikariDataSource      : HikariPool-1 - Shutdown completed. 
+2025-03-06 15:06:25.793  INFO 1 - [       main] c.epam.healenium.Application     : Starting Application v3.4.6 using Java 22.0.2 with PID 1 (/healenium-backend.jar started by root in /) 
+2025-03-06 15:06:25.903  INFO 1 - [       main] c.epam.healenium.Application     : No active profile set, falling back to 1 default profile: "default" 
+2025-03-06 15:06:29.025  INFO 1 - [       main] .RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+2025-03-06 15:06:29.576  INFO 1 - [       main] .RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 530 ms. Found 4 JPA repository interfaces. 
+2025-03-06 15:06:32.780  INFO 1 - [       main] o.s.b.w.e.t.TomcatWebServer      : Tomcat initialized with port 7878 (http) 
+2025-03-06 15:06:32.885  INFO 1 - [       main] o.a.c.core.StandardService       : Starting service [Tomcat] 
+2025-03-06 15:06:32.889  INFO 1 - [       main] o.a.c.core.StandardEngine        : Starting Servlet engine: [Apache Tomcat/10.1.30] 
+2025-03-06 15:06:33.102  INFO 1 - [       main] o.a.c.c.C.[.[localhost].[/]      : Initializing Spring embedded WebApplicationContext 
+2025-03-06 15:06:33.105  INFO 1 - [       main] rvletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 7103 ms 
+2025-03-06 15:06:34.351  INFO 1 - [       main] c.z.hikari.HikariDataSource      : HikariPool-1 - Starting... 
+2025-03-06 15:06:35.020  INFO 1 - [       main] c.z.hikari.HikariDataSource      : HikariPool-1 - Start completed. 
+2025-03-06 15:06:35.439  INFO 1 - [       main] liquibase.database               : Set default schema name to healenium 
+2025-03-06 15:06:37.237  INFO 1 - [       main] liquibase.changelog              : Reading from healenium.databasechangelog 
+2025-03-06 15:06:37.382  INFO 1 - [       main] liquibase.ui                     : Database is up to date, no changesets to execute 
+2025-03-06 15:06:37.392  INFO 1 - [       main] liquibase.changelog              : Reading from healenium.databasechangelog 
+2025-03-06 15:06:37.425  INFO 1 - [       main] liquibase.util                   : UPDATE SUMMARY 
+2025-03-06 15:06:37.427  INFO 1 - [       main] liquibase.util                   : Run:                          0 
+2025-03-06 15:06:37.428  INFO 1 - [       main] liquibase.util                   : Previously run:              10 
+2025-03-06 15:06:37.428  INFO 1 - [       main] liquibase.util                   : Filtered out:                 0 
+2025-03-06 15:06:37.429  INFO 1 - [       main] liquibase.util                   : ------------------------------- 
+2025-03-06 15:06:37.429  INFO 1 - [       main] liquibase.util                   : Total change sets:           10 
+2025-03-06 15:06:37.430  INFO 1 - [       main] liquibase.util                   : Update summary generated 
+2025-03-06 15:06:37.490  INFO 1 - [       main] liquibase.lockservice            : Successfully released change log lock 
+2025-03-06 15:06:37.496  INFO 1 - [       main] liquibase.command                : Command execution complete 
+2025-03-06 15:06:37.923  INFO 1 - [       main] o.h.j.internal.util.LogHelper    : HHH000204: Processing PersistenceUnitInfo [name: default] 
+2025-03-06 15:06:38.236  INFO 1 - [       main] org.hibernate.Version            : HHH000412: Hibernate ORM core version 6.5.3.Final 
+2025-03-06 15:06:38.412  INFO 1 - [       main] o.h.c.i.RegionFactoryInitiator   : HHH000026: Second-level cache disabled 
+2025-03-06 15:06:39.641  INFO 1 - [       main] .o.j.p.SpringPersistenceUnitInfo : No LoadTimeWeaver setup: ignoring JPA class transformer 
+2025-03-06 15:06:39.686  WARN 1 - [       main] org.hibernate.orm.deprecation    : HHH90000021: Encountered deprecated setting [hibernate.temp.use_jdbc_metadata_defaults], use [hibernate.boot.allow_jdbc_metadata_access] instead 
+2025-03-06 15:06:39.748  WARN 1 - [       main] org.hibernate.orm.deprecation    : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default) 
+2025-03-06 15:06:43.016  WARN 1 - [       main] o.h.m.internal.MetadataContext   : HHH015011: Unable to locate static metamodel field : com.epam.healenium.model.domain.Selector_#nodePathWrapper; this may or may not indicate a problem with the static metamodel 
+2025-03-06 15:06:43.046  INFO 1 - [       main] h.e.t.j.p.i.JtaPlatformInitiator : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) 
+2025-03-06 15:06:43.066  INFO 1 - [       main] ontainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default' 
+2025-03-06 15:06:45.241  INFO 1 - [       main] o.s.d.j.r.q.QueryEnhancerFactory : Hibernate is in classpath; If applicable, HQL parser will be used. 
+2025-03-06 15:06:48.824  INFO 1 - [       main] .a.w.s.WelcomePageHandlerMapping : Adding welcome page template: index 
+2025-03-06 15:06:52.245  INFO 1 - [       main] .s.b.a.e.w.EndpointLinksResolver : Exposing 1 endpoint beneath base path '/actuator' 
+2025-03-06 15:06:53.261  INFO 1 - [       main] o.s.b.w.e.t.TomcatWebServer      : Tomcat started on port 7878 (http) with context path '/' 
+2025-03-06 15:06:54.119  INFO 1 - [       main] c.epam.healenium.Application     : Started Application in 29.666 seconds (process running for 31.431) 
+2025-03-06 15:07:13.927  INFO 1 - [7878-exec-1] o.a.c.c.C.[.[localhost].[/]      : Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2025-03-06 15:07:13.940  INFO 1 - [7878-exec-1] o.s.w.s.DispatcherServlet        : Initializing Servlet 'dispatcherServlet' 
+2025-03-06 15:07:13.956  INFO 1 - [7878-exec-1] o.s.w.s.DispatcherServlet        : Completed initialization in 15 ms 
+2025-03-06 15:10:03.334  INFO 1 - [7878-exec-6] healenium                        : [Save Elements] Request: By.cssSelector(input[id='user-name']) 
+2025-03-06 15:10:05.708  INFO 1 - [7878-exec-7] healenium                        : [Save Elements] Request: By.xpath((//input[@data-test='password'])) 
+2025-03-06 15:10:06.689  INFO 1 - [7878-exec-8] healenium                        : [Save Elements] Request: By.xpath(//input[@value='LOGIN']) 
+2025-03-06 15:10:53.141  INFO 1 - [7878-exec-9] healenium                        : [Save Elements] Request: By.xpath((//div[@id="inventory_container"])[2]) 
+2025-03-06 15:10:56.699  INFO 1 - [7878-exec-1] healenium                        : [Save Elements] Request: By.xpath((//div[@class="inventory_item_name"])[1]) 
+2025-03-06 15:10:57.229  INFO 1 - [7878-exec-2] healenium                        : [Save Elements] Request: By.xpath((//div[@class="inventory_item_name"])[2]) 
+2025-03-06 15:10:57.848  INFO 1 - [7878-exec-3] healenium                        : [Save Elements] Request: By.xpath((//div[@class="inventory_item_name"])[3]) 
+2025-03-06 15:10:58.350  INFO 1 - [7878-exec-4] healenium                        : [Save Elements] Request: By.xpath((//div[@class="inventory_item_name"])[4]) 
+2025-03-06 15:10:58.835  INFO 1 - [7878-exec-5] healenium                        : [Save Elements] Request: By.xpath((//button[@class="btn_primary btn_inventory"])[4]) 
+2025-03-06 15:10:59.164  INFO 1 - [7878-exec-6] healenium                        : [Save Elements] Request: By.xpath((//div[@class="inventory_item_price"])[4]) 
+2025-03-06 15:10:59.923  INFO 1 - [7878-exec-7] healenium                        : [Save Elements] Request: By.xpath((//div[@class="inventory_item_name"])[5]) 
+2025-03-06 15:11:00.369  INFO 1 - [7878-exec-8] healenium                        : [Save Elements] Request: By.xpath((//div[@class="inventory_item_name"])[5]) 
+2025-03-06 15:11:01.360  INFO 1 - [7878-exec-9] healenium                        : [Save Elements] Request: By.xpath(//div[@class="inventory_details_price"]) 
+2025-03-06 15:11:01.833  INFO 1 - [878-exec-10] healenium                        : [Save Elements] Request: By.cssSelector(button[class="btn_primary btn_inventory"]) 
+2025-03-06 15:11:02.406  INFO 1 - [7878-exec-1] healenium                        : [Save Elements] Request: By.xpath(//span[@class="fa-layers-counter shopping_cart_badge"]) 
+2025-03-06 15:11:02.865  INFO 1 - [7878-exec-2] healenium                        : [Save Elements] Request: By.xpath(//*[@class="shopping_cart_link fa-layers fa-fw"]) 
+2025-03-06 15:11:03.892  INFO 1 - [7878-exec-3] healenium                        : [Save Elements] Request: By.xpath((//div[@class="inventory_item_name"])[1]) 
+2025-03-06 15:11:04.342  INFO 1 - [7878-exec-4] healenium                        : [Save Elements] Request: By.xpath((//div[@class="inventory_item_price"])[1]) 
+2025-03-06 15:11:04.746  INFO 1 - [7878-exec-5] healenium                        : [Save Elements] Request: By.xpath((//div[@class="inventory_item_name"])[2]) 
+2025-03-06 15:11:05.166  INFO 1 - [7878-exec-6] healenium                        : [Save Elements] Request: By.xpath((//div[@class="inventory_item_price"])[2]) 
+2025-03-06 15:11:05.579  INFO 1 - [7878-exec-7] healenium                        : [Save Elements] Request: By.xpath(//a[@class="btn_action checkout_button"]) 
+2025-03-06 15:11:06.407  INFO 1 - [7878-exec-8] healenium                        : [Save Elements] Request: By.xpath(//input[@data-test="firstName"]) 
+2025-03-06 15:11:06.964  INFO 1 - [7878-exec-9] healenium                        : [Save Elements] Request: By.xpath(//input[@data-test="lastName"]) 
+2025-03-06 15:11:07.590  INFO 1 - [878-exec-10] healenium                        : [Save Elements] Request: By.xpath(//input[@data-test="postalCode"]) 
+2025-03-06 15:11:08.309  INFO 1 - [7878-exec-1] healenium                        : [Save Elements] Request: By.xpath(//input[@class="btn_primary cart_button"]) 
+2025-03-06 15:11:09.178  INFO 1 - [7878-exec-2] healenium                        : [Save Elements] Request: By.xpath((//div[@class="inventory_item_name"])[1]) 
+2025-03-06 15:11:09.638  INFO 1 - [7878-exec-3] healenium                        : [Save Elements] Request: By.xpath((//div[@class="inventory_item_name"])[2]) 
+2025-03-06 15:11:10.058  INFO 1 - [7878-exec-4] healenium                        : [Save Elements] Request: By.xpath((//div[@class="inventory_item_price"])[1]) 
+2025-03-06 15:11:10.486  INFO 1 - [7878-exec-5] healenium                        : [Save Elements] Request: By.xpath((//div[@class="inventory_item_price"])[2]) 
+2025-03-06 15:11:10.944  INFO 1 - [7878-exec-6] healenium                        : [Save Elements] Request: By.xpath(//div[@class="summary_subtotal_label"]) 
+2025-03-06 15:11:11.432  INFO 1 - [7878-exec-7] healenium                        : [Save Elements] Request: By.xpath(//div[@class="summary_tax_label"]) 
+2025-03-06 15:11:11.846  INFO 1 - [7878-exec-8] healenium                        : [Save Elements] Request: By.xpath((//div[@class="summary_total_label"])[1]) 
+2025-03-06 15:11:12.372  INFO 1 - [7878-exec-9] healenium                        : [Save Elements] Request: By.xpath(//a[@class="btn_action cart_button"]) 
+2025-03-06 15:11:13.568  INFO 1 - [878-exec-10] healenium                        : [Save Elements] Request: By.xpath(//h2[@class="complete-header"]) 
+2025-03-06 15:30:28.400  INFO 1 - [7878-exec-4] healenium                        : [Save Elements] Request: By.cssSelector(input[id='user-name']) 
+2025-03-06 15:30:29.334  INFO 1 - [7878-exec-5] healenium                        : [Save Elements] Request: By.xpath((//input[@data-test='password'])) 
+2025-03-06 15:30:29.938  INFO 1 - [7878-exec-6] healenium                        : [Save Elements] Request: By.xpath(//input[@value='LOGIN']) 
+2025-03-06 15:31:11.208  INFO 1 - [7878-exec-7] healenium                        : [Save Elements] Request: By.xpath((//div[@id="inventory_container"])[2]) 
+2025-03-06 15:31:12.490  INFO 1 - [7878-exec-9] healenium                        : [Save Elements] Request: By.xpath((//div[@class="inventory_item_name"])[1]) 
+2025-03-06 15:31:12.892  INFO 1 - [878-exec-10] healenium                        : [Save Elements] Request: By.xpath((//div[@class="inventory_item_name"])[2]) 
+2025-03-06 15:31:13.273  INFO 1 - [7878-exec-1] healenium                        : [Save Elements] Request: By.xpath((//div[@class="inventory_item_name"])[3]) 
+2025-03-06 15:31:13.652  INFO 1 - [7878-exec-2] healenium                        : [Save Elements] Request: By.xpath((//div[@class="inventory_item_name"])[4]) 
+2025-03-06 15:31:14.035  INFO 1 - [7878-exec-3] healenium                        : [Save Elements] Request: By.xpath((//button[@class="btn_primary btn_inventory"])[4]) 
+2025-03-06 15:31:14.430  INFO 1 - [7878-exec-4] healenium                        : [Save Elements] Request: By.xpath((//div[@class="inventory_item_price"])[4]) 
+2025-03-06 15:31:15.060  INFO 1 - [7878-exec-5] healenium                        : [Save Elements] Request: By.xpath((//div[@class="inventory_item_name"])[5]) 
+2025-03-06 15:31:15.492  INFO 1 - [7878-exec-6] healenium                        : [Save Elements] Request: By.xpath((//div[@class="inventory_item_name"])[5]) 
+2025-03-06 15:31:16.321  INFO 1 - [7878-exec-7] healenium                        : [Save Elements] Request: By.xpath(//div[@class="inventory_details_price"]) 
+2025-03-06 15:31:16.687  INFO 1 - [7878-exec-8] healenium                        : [Save Elements] Request: By.cssSelector(button[class="btn_primary btn_inventory"]) 
+2025-03-06 15:31:17.156  INFO 1 - [7878-exec-9] healenium                        : [Save Elements] Request: By.xpath(//span[@class="fa-layers-counter shopping_cart_badge"]) 
+2025-03-06 15:31:17.511  INFO 1 - [878-exec-10] healenium                        : [Save Elements] Request: By.xpath(//*[@class="shopping_cart_link fa-layers fa-fw"]) 
+2025-03-06 15:31:18.207  INFO 1 - [7878-exec-1] healenium                        : [Save Elements] Request: By.xpath((//div[@class="inventory_item_name"])[1]) 
+2025-03-06 15:31:18.629  INFO 1 - [7878-exec-2] healenium                        : [Save Elements] Request: By.xpath((//div[@class="inventory_item_price"])[1]) 
+2025-03-06 15:31:19.084  INFO 1 - [7878-exec-3] healenium                        : [Save Elements] Request: By.xpath((//div[@class="inventory_item_name"])[2]) 
+2025-03-06 15:31:19.462  INFO 1 - [7878-exec-4] healenium                        : [Save Elements] Request: By.xpath((//div[@class="inventory_item_price"])[2]) 
+2025-03-06 15:31:19.852  INFO 1 - [7878-exec-5] healenium                        : [Save Elements] Request: By.xpath(//a[@class="btn_action checkout_button"]) 
+2025-03-06 15:31:20.541  INFO 1 - [7878-exec-6] healenium                        : [Save Elements] Request: By.xpath(//input[@data-test="firstName"]) 
+2025-03-06 15:31:21.049  INFO 1 - [7878-exec-7] healenium                        : [Save Elements] Request: By.xpath(//input[@data-test="lastName"]) 
+2025-03-06 15:31:21.600  INFO 1 - [7878-exec-8] healenium                        : [Save Elements] Request: By.xpath(//input[@data-test="postalCode"]) 
+2025-03-06 15:31:22.177  INFO 1 - [7878-exec-9] healenium                        : [Save Elements] Request: By.xpath(//input[@class="btn_primary cart_button"]) 
+2025-03-06 15:31:22.861  INFO 1 - [878-exec-10] healenium                        : [Save Elements] Request: By.xpath((//div[@class="inventory_item_name"])[1]) 
+2025-03-06 15:31:23.243  INFO 1 - [7878-exec-1] healenium                        : [Save Elements] Request: By.xpath((//div[@class="inventory_item_name"])[2]) 
+2025-03-06 15:31:23.600  INFO 1 - [7878-exec-2] healenium                        : [Save Elements] Request: By.xpath((//div[@class="inventory_item_price"])[1]) 
+2025-03-06 15:31:23.965  INFO 1 - [7878-exec-3] healenium                        : [Save Elements] Request: By.xpath((//div[@class="inventory_item_price"])[2]) 
+2025-03-06 15:31:24.330  INFO 1 - [7878-exec-4] healenium                        : [Save Elements] Request: By.xpath(//div[@class="summary_subtotal_label"]) 
+2025-03-06 15:31:24.905  INFO 1 - [7878-exec-5] healenium                        : [Save Elements] Request: By.xpath(//div[@class="summary_tax_label"]) 
+2025-03-06 15:31:25.302  INFO 1 - [7878-exec-6] healenium                        : [Save Elements] Request: By.xpath((//div[@class="summary_total_label"])[1]) 
+2025-03-06 15:31:25.682  INFO 1 - [7878-exec-7] healenium                        : [Save Elements] Request: By.xpath(//a[@class="btn_action cart_button"]) 
+2025-03-06 15:31:26.475  INFO 1 - [7878-exec-8] healenium                        : [Save Elements] Request: By.xpath(//h2[@class="complete-header"]) 
+2025-03-06 21:04:28.525  INFO 1 - [hutdownHook] ontainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default' 
+2025-03-06 21:04:29.334  INFO 1 - [hutdownHook] c.z.hikari.HikariDataSource      : HikariPool-1 - Shutdown initiated... 
+2025-03-06 21:04:29.407  INFO 1 - [hutdownHook] c.z.hikari.HikariDataSource      : HikariPool-1 - Shutdown completed. 

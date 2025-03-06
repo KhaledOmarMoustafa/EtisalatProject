@@ -1,0 +1,5 @@
+language,key,value
+en,login_button,Login
+en,checkout_button,Checkout
+fr,login_button,Connexion
+fr,checkout_button,Paiement
