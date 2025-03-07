@@ -30,6 +30,7 @@ public class AppTest extends JsonFetcher {
         jsonFetcher.jsonFetcher();
         preRequisites.openBrowser();
 
+
         String loginUrl = PreRequisites.webURL; // Replace with actual URL
         ZAPSecurityTest.scan(loginUrl);
         // Upload baseline images once at the beginning
@@ -63,8 +64,8 @@ public class AppTest extends JsonFetcher {
 
     @Test(priority = 1)
     public void login() throws InterruptedException {
-        loginTest.login("en"); // Runs in French
-        //loginTest.login("en"); // Runs in English
+        loginTest.login("en"); // Run Tests in the desired Language
+
 
     }
 

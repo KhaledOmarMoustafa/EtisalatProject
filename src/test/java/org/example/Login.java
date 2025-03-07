@@ -2,6 +2,7 @@ package org.example;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
 public class Login {
     public void login(String language) {
@@ -26,5 +27,8 @@ public class Login {
         // Step 3: Locate and click the login button
         WebElement clickLogin = PreRequisites.driver.findElement(By.xpath("//input[@value='" + loginButtonText.toUpperCase() + "']"));
         clickLogin.click();
+
+        Assert.assertEquals(1,2);
+
     }
 }
