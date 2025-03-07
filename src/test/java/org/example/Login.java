@@ -28,7 +28,7 @@ public class Login {
         WebElement clickLogin = PreRequisites.driver.findElement(By.xpath("//input[@value='" + loginButtonText.toUpperCase() + "']"));
         clickLogin.click();
 
-        Assert.assertEquals(1,2);
+
 
     }
 }
